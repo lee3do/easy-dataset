@@ -24,69 +24,6 @@ export default function ActionButtons({ theme, resolvedTheme, toggleTheme, isPro
     <Box sx={styles.actionAreaStyles}>
       {isProjectDetail && <ModelSelect projectId={currentProject} />}
       {isProjectDetail && <TaskIcon theme={theme} projectId={currentProject} />}
-
-      {/* Language Switcher - Always visible */}
-      <LanguageSwitcher />
-
-      {/* Theme Toggle - Always visible */}
-      <Tooltip
-        title={
-          resolvedTheme === 'dark'
-            ? t('theme.switchToLight', 'Switch to light mode')
-            : t('theme.switchToDark', 'Switch to dark mode')
-        }
-      >
-        <IconButton
-          onClick={toggleTheme}
-          size="medium"
-          aria-label={
-            resolvedTheme === 'dark'
-              ? t('theme.switchToLight', 'Switch to light mode')
-              : t('theme.switchToDark', 'Switch to dark mode')
-          }
-          sx={styles.getIconButtonStyles(theme)}
-        >
-          {resolvedTheme === 'dark' ? (
-            <LightModeOutlinedIcon fontSize="small" />
-          ) : (
-            <DarkModeOutlinedIcon fontSize="small" />
-          )}
-        </IconButton>
-      </Tooltip>
-
-      {/* Documentation - Hide below xl */}
-      <Tooltip title={t('documentation')}>
-        <IconButton
-          component="a"
-          href={i18n.language === 'zh-CN' ? 'https://docs.easy-dataset.com/' : 'https://docs.easy-dataset.com/ed/en'}
-          target="_blank"
-          rel="noopener noreferrer"
-          size="medium"
-          sx={styles.getIconButtonStyles(theme)}
-        >
-          <HelpOutlineIcon fontSize="small" />
-        </IconButton>
-      </Tooltip>
-
-      {/* GitHub - Hide at larger tablet screens and below */}
-      <Tooltip title={t('common.visitGitHub', 'View on GitHub')}>
-        <IconButton
-          component="a"
-          href="https://github.com/ConardLi/easy-dataset"
-          target="_blank"
-          rel="noopener noreferrer"
-          size="medium"
-          aria-label={t('common.visitGitHub', 'Open GitHub repository')}
-          sx={styles.getIconButtonStyles(theme)}
-        >
-          <GitHubIcon fontSize="small" />
-        </IconButton>
-      </Tooltip>
-
-      {/* Update Checker - Hide below xl */}
-      <Box sx={{ display: { xs: 'none', xl: 'flex' } }}>
-        <UpdateChecker />
-      </Box>
     </Box>
   );
 }

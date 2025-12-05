@@ -278,7 +278,7 @@
     "apply": "Apply"
   },
   "home": {
-    "title": "Easy Dataset",
+    "title": "Communication Agent Robot Training Platform",
     "subtitle": "A powerful tool for creating fine-tuning datasets for Large Language Models",
     "createProject": "Create Project",
     "searchDataset": "Search Public Datasets"

@@ -42,18 +42,18 @@ app.whenReady().then(async () => {
       loadAppUrl(appUrl);
     }
 
-    // 设置自动更新
-    setupAutoUpdater(mainWindow);
+    // 设置自动更新（已禁用）
+    // setupAutoUpdater(mainWindow);
 
-    // 应用启动完成后的一段时间后自动检查更新
-    setTimeout(() => {
-      if (!isDev) {
-        const { autoUpdater } = require('electron-updater');
-        autoUpdater.checkForUpdates().catch(err => {
-          console.error('Automatic update check failed:', err);
-        });
-      }
-    }, 10000); // Check for updates after 10 seconds
+    // 应用启动完成后的一段时间后自动检查更新（已禁用）
+    // setTimeout(() => {
+    //   if (!isDev) {
+    //     const { autoUpdater } = require('electron-updater');
+    //     autoUpdater.checkForUpdates().catch(err => {
+    //       console.error('Automatic update check failed:', err);
+    //     });
+    //   }
+    // }, 10000); // Check for updates after 10 seconds
   } catch (error) {
     console.error('An error occurred during application initialization:', error);
     dialog.showErrorBox(

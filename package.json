@@ -100,6 +100,8 @@
     "concurrently": "^8.2.2",
     "electron": "^35.0.0",
     "electron-builder": "^24.13.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "16.0.7",
     "husky": "^9.1.7",
     "lint-staged": "15.5.2",
     "pkg": "^5.8.1",
@@ -113,7 +115,7 @@
   "description": "一个用于创建大模型微调数据集的应用程序",
   "build": {
     "appId": "com.easydataset.app",
-    "productName": "Easy Dataset",
+    "productName": "通信智能体机器人训练平台",
     "files": [
       ".next/**/*",
       "!.next/cache/**/*",

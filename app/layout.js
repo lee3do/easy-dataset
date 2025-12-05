@@ -5,7 +5,7 @@ import { Toaster } from 'sonner';
 import { Provider } from 'jotai';
 
 export const metadata = {
-  title: 'Easy Dataset',
+  title: '通信智能体机器人训练平台',
   description: '一个强大的 LLM 数据集生成工具',
   icons: {
     icon: '/imgs/logo.ico' // 更新为正确的文件名

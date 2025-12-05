@@ -287,53 +287,7 @@ export default function MobileDrawer({
           </List>
         </Collapse>
 
-        {/* Utilities Section */}
-        <Box sx={styles.getDrawerUtilitiesStyles(theme)}>
-          <ListItem disablePadding sx={{ mb: 0.5 }}>
-            <ListItemButton
-              component="a"
-              href={
-                i18n.language === 'zh-CN' ? 'https://docs.easy-dataset.com/' : 'https://docs.easy-dataset.com/ed/en'
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={toggleDrawer}
-              sx={styles.getDrawerListItemButtonStyles(theme)}
-            >
-              <ListItemIcon sx={styles.listItemIconStyles}>
-                <HelpOutlineIcon sx={styles.getIconColorStyles(theme)} />
-              </ListItemIcon>
-              <ListItemText
-                primary={t('common.documentation', 'Documentation')}
-                primaryTypographyProps={styles.listItemTextStyles}
-              />
-            </ListItemButton>
-          </ListItem>
 
-          <ListItem disablePadding sx={{ mb: 0.5 }}>
-            <ListItemButton
-              onClick={() => {
-                window.open('https://github.com/ConardLi/easy-dataset', '_blank');
-                toggleDrawer();
-              }}
-              sx={styles.getDrawerListItemButtonStyles(theme)}
-            >
-              <ListItemIcon sx={styles.listItemIconStyles}>
-                <GitHubIcon sx={styles.getIconColorStyles(theme)} />
-              </ListItemIcon>
-              <ListItemText
-                primary={t('common.viewOnGitHub', 'View on GitHub')}
-                primaryTypographyProps={styles.listItemTextStyles}
-              />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding sx={{ mb: 1 }}>
-            <Box sx={{ px: 1, width: '100%' }}>
-              <UpdateChecker />
-            </Box>
-          </ListItem>
-        </Box>
       </List>
     </Drawer>
   );

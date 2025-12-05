@@ -26,7 +26,7 @@ function createWindow(isDev, port) {
   });
 
   // 设置窗口标题
-  mainWindow.setTitle(`Easy Dataset v${getAppVersion()}`);
+  mainWindow.setTitle(`通信智能体机器人训练平台 v${getAppVersion()}`);
   const loadingPath = url.format({
     pathname: path.join(__dirname, '..', 'loading.html'),
     protocol: 'file:',
